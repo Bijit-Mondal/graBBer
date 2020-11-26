@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="favi.svg" id="icon" type="image/x-icon">
+	<title>Grabber</title>
+	<style>
+		.line{
+			display: none;
+		}
+		.photo{
+			background:rgba(0,0,0,0.6)url("https://source.unsplash.com/1500x700/?youtube,coding");
+			height:800px;
+			min-width:1528px;
+			max-width: 1930px;
+			display: block;
+			background-size:cover;
+		}
+		.ph_photo{
+			display: none;
+			min-width:1528px;
+			max-width: 1930px;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			background-image:radial-gradient(#FAA4DF,#FAA5A4);
+		}
+		a{
+			text-decoration: none;
+		}
+		.nav_bar{
+		max-width: 1930px;
+		min-width: 1528px;
+		height: 72px;
+		display: flex;
+		align-items: center;
+		position: sticky;
+		background-color:#DF0D43;
+		box-shadow: 0px 1px 20px black, 1px 0px 20px #C4FFF0,2px 0px 20px hotpink;	
+		}
+		.foot{
+			max-width:1930px ;
+			min-width:1528px ;
+			display: flex;
+			position: sticky;
+			background-color:#DF0D43;
+			color: white;
+			text-shadow: 1px 1px 20px black, 2px 0px 20px red;
+			font-family:fantasy,'Courier New', Courier, monospace;
+			box-shadow: 0px 1px 20px black, 1px 0px 20px #C4FFF0,2px 0px 20px darkblue;
+		}
+		.foo::selection{
+			background-color:#FAA5A4;
+			color: black;
+		}
+		.subheading{
+			font-size: 20px;
+		}
+		.heading{
+			color: rgb(248, 248, 247);
+			padding-left: 703px;
+			font-size: 40px;
+			text-shadow: 1px 1px 20px black, 2px 0px 20px red;
+		}
+		.heading::selection{
+			background-color: none;
+			color: black;
+		}
+		.subheading::selection{
+			background-color: none;
+			color: black;
+		}
+		.sec{
+			background-image:radial-gradient(#FAA4DF,#FAA5A4);
+			max-width:1930px ;
+			min-width:1528px ;
+		}
+		.link{
+			margin-top: 100px;
+			margin-right: 130px;
+			background-color: #E46182;
+			color: black;
+			width: 900px;
+			height:33px;
+			border-radius: 30px;
+			font-family: monospace;
+			font-size: 23px;
+		}
+		.link::selection{
+			background-color: white;
+			color: black;
+		}
+		.format::selection{
+			background-color: none;
+		}
+		.format:active{
+			background-color:#8D0000 ;
+		}
+		.go{
+			height:39px;
+			border-radius: 29px;
+			margin-left: -242px;
+			background-color: #E46189;
+			font-weight: 900;
+			font-size: 23px;
+			color:white;
+			text-shadow: 1px 1px 20px black, 2px 0px 20px red;
+			display: none;
+		}
+		.go:hover{
+			cursor: pointer;
+		}
+		.format{
+			width:133px ;
+			height:85px;
+			padding: 7px;
+			margin-top: 98px;
+			margin-right: 100px;
+			font-size: 17px;
+			color:white;
+			text-shadow: 1px 1px 20px black, 2px 0px 20px red;
+			background-color: #E46189;
+			font-weight: 900;
+			font-family: sans-serif;
+			border-radius: 34px;
+		}
+		.format:hover{
+			cursor: pointer;
+		}
+		@media screen and (max-width: 1000px){
+			.sec{
+			}
+			.line{
+				display: block;
+			}
+			.photo{
+				height: 758px;
+			}
+			.ph_photo{
+				background-size:cover;
+				background:rgba(0,0,0,0.6)url("https://source.unsplash.com/1500x700/?hacking,downloading");
+				display: block;
+				height: 758px;
+			}
+			.foot{
+				
+			}
+			.foo{
+				width: 1400px;
+				font-size: 29px;
+			}
+			.format{
+				display: flex;
+				font-family: monospace;
+				width: 413px;
+				height: 177px;
+				font-size: 47px;
+				text-align: center;
+				border-radius: 87px;
+				display: none;
+			}
+			.heading{
+				font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				font-size: 80px;
+				text-align: center;
+    			padding-left: 300px;
+			}
+			.subheading{
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				font-size: 52px;
+			}
+			.nav_bar{
+				height: 181px;
+			}
+			.link{
+				width:1280px;
+				margin-left: 97px;
+    			background-color: #E46182;
+  			    color: black;
+    			height: 100px;
+    			border-radius: 87px;
+    			font-size: 55px;
+    			font-family: monospace;
+			}
+			.go{
+			    width: 294px;
+    margin-top: 109px;
+    margin-left: -6px;
+    height: 130px;
+    border-radius: 69px;
+    background-color: #E46189;
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 1px 1px 20px black, 2px 0px 20px red;
+	display: block;
+		}
+	}
+	</style>
+</head>
+<body id="body">
+	<nav class="nav_bar">
+	<h1 class="heading">GraBBer -<span class="subheading"> Youtube Downloader</span></h1> 
+	</nav>
+	<div class="sec">
+		<form action="grabber.php" method="post">
+		<center>
+		<input type="text" required placeholder="Enter youtube  url like https://youtube.com/watch?v=aBc1!s" class="link" name="id"></input>
+		<button type="submit" name="submit" class="go">Download</button>
+		</center>
+		<center>	
+		<input type="submit" name="submitmp3" value="Audio/128 Mp3" class="format a"></input>&nbsp;&nbsp;
+		<input type="submit" name="720mp4" value="Video/720 Mp4" class="format ab"></input>&nbsp;&nbsp;
+		<input type="submit" name="360mp4" value="Video/360 Mp4" class="format abc"></input>&nbsp;&nbsp;
+		<input type="submit" name="240mp4" value="Video/240 Mp4" class="format abcd"></input>&nbsp;&nbsp;
+	</center>
+	</form>
+	</div>
+	<div class="photo">
+	</div><hr class="line" width="900px" height="100px" >
+	<div class="ph_photo">
+
+	</div>
+	<footer class="foot">
+		<center>
+		<p class="foo">This Website Is Made By Mkp Bijit, With Help Of Third Party Api's, The Copyright Of
+		The Project Isn't Reserve By Me, Or Anyone Else. This Is A Open Source Project And Anyone Can Access It From <a target="blank" href="" class="foo">Here</a></p>
+	</center>
+	</footer>
+	<script>
+		var clickerButton=document.querySelector(".go");
+		var option=document.querySelector(".a");
+		var optio=document.querySelector(".ab");
+		var opti=document.querySelector(".abc");
+		var opt=document.querySelector(".abcd");
+		var photo = document.querySelector(".ph_photo");
+		var onButtonClick = function(e){
+			e.preventDefault();
+			photo.style.display="none";
+			clickerButton.style.display="none";
+			option.style.display = "block";
+			optio.style.display = "block";
+			opti.style.display = "block";
+			opt.style.display = "block";
+		} 
+		clickerButton.addEventListener("click",onButtonClick);
+	</script>
+</body>
+</html>
